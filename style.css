@@ -1,11 +1,13 @@
 /*
 Theme Name: Unisex
-Author:UNISEX
-Theme URI: https://unisex.cl/themes/unisex
-Author: Equipo Unisex
-Description:Temas desarrollado para Unisex
-Version: 1.0
-License: GNU General Public License v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Theme URI: https://unisex-dev.github.io/unisex-html/
+Github Theme URI: https://github.com/unisex-dev/unisex
+Author:Unisex
+Author URI: https://unisex.cl
+Version: 2.2.9
+Description: Temas desarrollado para Unisex
+License: General Public License versión 2.0 o posterior.
+Text Domain: Unisex
+Tags: noticias, blog, barra lateral derecha, encabezado personalizado,  logotipo personalizado, widgets, menú personalizado, imágenes destacadas, estilo editor, microformatos, publicación fija, cabecera flexible
 */
 @import url("css/style.css");
