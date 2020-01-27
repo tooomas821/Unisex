@@ -1,6 +1,12 @@
 <?php get_header();?>
   <div class="intro-pag text-white h-100 table-cell" style="background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.75), rgba(0, 0, 0, 0.75)), url(https://source.unsplash.com/QckxruozjRg/500x500); background-position: center bottom, center bottom;  background-size: cover, cover;  background-repeat: repeat, repeat;">
-  <h1 class="pagina-nombre mb-4 box-headline letters rotate-2 font-italic"><?php wp_title('', true,''); ?></h1>
+  <div class="title">
+      <h1 class="mb-4 font-italic text-uppercase font-weight-bold title split-character"><?php wp_title('', true,''); ?></h1>
+  </div>
+  <div class="description">
+      <h6 class="mb-4 font-italic text-uppercase font-weight-bold title split-character"></h6>
+  </div>
+
   <p class="migas">
     <a href="<?php bloginfo('url')?>">Inicio</a> / <?php wp_title('', true,''); ?></p>
  </div>

@@ -22,10 +22,10 @@ add_action('customize_register', 'your_theme_new_customizer_settings');
  * =================================================================================*/
 function add_to_author_profile( $contactmethods ) {
   $contactmethods['cargo_empresa'] = 'Cargo en la empresa';
-  $contactmethods['github_profile'] = 'Github Profile URL';
-  $contactmethods['Gitlab_profile'] = 'Gitlab Profile URL';
-  $contactmethods['fcc_profile'] = 'Freecodecamp Profile URL';
-  $contactmethods['linkedin_profile'] = 'Linkedin Profile URL';
+  $contactmethods['github'] = 'Github Profile URL';
+  $contactmethods['gitlab'] = 'Gitlab Profile URL';
+  $contactmethods['fcc'] = 'Freecodecamp Profile URL';
+  $contactmethods['linkedin'] = 'Linkedin Profile URL';
   
   return $contactmethods;
 }
@@ -188,6 +188,31 @@ function my_customize_register( $wp_customize ) {
     'capability' => 'edit_theme_options',
   ));
  
+   //Redes Sociales: Github
+  $wp_customize->add_setting( 'my_github_url', array(
+    'type' => 'option',
+    'capability' => 'edit_theme_options',
+  ));
+ 
+  $wp_customize->add_control('my_github_url', array(
+    'label' => __( 'Github URL', 'textdomain' ),
+    'section' => 'social_section',
+    'priority' => 4,
+    'type' => 'text',
+  ));
+
+  //Redes Sociales: Gitlab
+  $wp_customize->add_setting( 'my_gitlab_url', array(
+    'type' => 'option',
+    'capability' => 'edit_theme_options',
+  ));
+ 
+  $wp_customize->add_control('my_gitlab_url', array(
+    'label' => __( 'Gitlab URL', 'textdomain' ),
+    'section' => 'social_section',
+    'priority' => 1,
+    'type' => 'text',
+  ));
  
   //Redes Sociales: Facebook
   $wp_customize->add_setting( 'my_facebook_url', array(
@@ -199,19 +224,6 @@ function my_customize_register( $wp_customize ) {
     'label' => __( 'Facebook URL', 'textdomain' ),
     'section' => 'social_section',
     'priority' => 1,
-    'type' => 'text',
-  ));
-
-  //Redes Sociales: Twitter
-  $wp_customize->add_setting( 'my_instagram_url', array(
-    'type' => 'option',
-    'capability' => 'edit_theme_options',
-  ));
- 
-  $wp_customize->add_control('my_instagram_url', array(
-    'label' => __( 'Instagram URL', 'textdomain' ),
-    'section' => 'social_section',
-    'priority' => 2,
     'type' => 'text',
   ));
 
@@ -229,17 +241,44 @@ function my_customize_register( $wp_customize ) {
   ));
 
   //Redes Sociales: Youtube
-  $wp_customize->add_setting( 'youtube', array(
+  $wp_customize->add_setting('my_youtube_url', array(
     'type' => 'option',
     'capability' => 'edit_theme_options',
   ));
  
-  $wp_customize->add_control('youtube', array(
-    'label' => __( 'Youtube', 'textdomain' ),
+  $wp_customize->add_control('my_youtube_url', array(
+    'label' => __( 'Instagram URL', 'textdomain' ),
     'section' => 'social_section',
-    'priority' => 4,
+    'priority' => 2,
     'type' => 'text',
+  )); 
+
+  //Redes Sociales: Instagram
+  $wp_customize->add_setting('my_instagram_url', array(
+    'type' => 'option',
+    'capability' => 'edit_theme_options',
   ));
+ 
+  $wp_customize->add_control('my_instagram_url', array(
+    'label' => __( 'Instagram URL', 'textdomain' ),
+    'section' => 'social_section',
+    'priority' => 2,
+    'type' => 'text',
+  ));  
+
+  //Redes Sociales: Twitter
+  $wp_customize->add_setting('my_twitter_url', array(
+    'type' => 'option',
+    'capability' => 'edit_theme_options',
+  ));
+ 
+  $wp_customize->add_control('my_twitter_url', array(
+    'label' => __( 'Instagram URL', 'textdomain' ),
+    'section' => 'social_section',
+    'priority' => 2,
+    'type' => 'text',
+  )); 
+
 }
 add_action( 'customize_register', 'my_customize_register' );
 

@@ -1,6 +1,7 @@
 <?php
 //////////Seccion Funciones como tales////////////////////
 require_once( get_template_directory() . '/funciones/acceso.php' );
+require_once( get_template_directory() . '/funciones/updater.php' );
 require_once( get_template_directory() . '/funciones/menu-walker-bs4.php' );
 require_once( get_template_directory() . '/funciones/personalizar.php' );
 require_once( get_template_directory() . '/funciones/parapost.php' );

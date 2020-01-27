@@ -1,7 +1,13 @@
 <?php /* Template Name: Nosotros */  get_header();?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="intro-pag text-white h-100 table-cell" style="background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.75), rgba(0, 0, 0, 0.75)), url(<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url(); } else { ?><?php bloginfo('template_directory'); ?>/screenshot.png <?php } ?>);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
-  <h1 class="pagina-nombre mb-4 box-headline letters rotate-2 font-italic"><?php the_title(); ?></h1>
+  <div class="title">
+      <h1 class="mb-4 font-italic text-uppercase font-weight-bold title split-character"><?php the_title(); ?></h1>
+  </div>
+  <div class="description">
+      <h6 class="mb-4 font-italic text-uppercase font-weight-bold title split-character">¿Porqué elegirnos?</h6>
+  </div>
+
   <p class="migas">
     <a href="<?php bloginfo('url')?>">Inicio</a> / <?php the_title(); ?>
   </p>
@@ -21,12 +27,15 @@
       <?php the_content(); ?>
      </div>
      <div class="col-md-12 p-3">
-      <h6 class="my-1">Nuestras redes sociales</h6>
+      <h6 class="my-3">Nuestras redes sociales</h6>
       <div class="social">
-       <a href="#"><i class="fab fa-github text-dark fa-lg"></i></a>
-       <a href="#"><i class="fab fa-gitlab text-dark fa-lg"></i></a>
-       <a href="#"><i class="fab fa-free-code-camp text-dark fa-lg"></i></a>
-       <a href="#"><i class="fab fa-codepen text-dark fa-lg"></i></a>
+       <a href="<?php echo get_option( 'my_facebook_url' ); ?>" title="Github"><i class="fab fa-github text-dark fa-lg"></i></a>
+       <a href="<?php echo get_option( 'my_gitlab_url' ); ?>" title="Gitlab"><i class="fab fa-gitlab text-dark fa-lg"></i></a>
+       <a href="<?php echo get_option( 'my_facebook_url' ); ?>" title="Facebook"><i class="fab fa-facebook text-dark fa-lg"></i></a>
+       <a href="<?php echo get_option( 'my_linkedin_url' ); ?>" title="Linkedin"><i class="fab fa-linkedin text-dark fa-lg"></i></a>
+       <a href="<?php echo get_option( 'my_youtube_url' ); ?>" title="Youtube"><i class="fab fa-youtube text-dark fa-lg"></i></a>
+       <a href="<?php echo get_option( 'my_instagram_url' ); ?>" title="Instagram"><i class="fab fa-instagram text-dark fa-lg"></i></a>
+       <a href="<?php echo get_option( 'my_twitter_url' ); ?>" title="Twitter"><i class="fab fa-twitter text-dark fa-lg"></i></a>
       </div>
      </div>
     </div>
@@ -50,7 +59,9 @@
   <?php foreach($users as $user) {  ?>
       <div class="swiper-slide">
        <div class="card border-0 rounded-0">
+        <a href="<?php echo get_author_posts_url( $user->ID ); ?>" title="<?php echo $user->display_name; ?> Avatar">
         <img src="<?php echo get_avatar_url( $user->user_email, ['size' => '700'] ); ?>" class="card-img-top rounded-0" alt="...">
+        </a>
         <div class="card-body text-center">
          <a href="<?php echo get_author_posts_url( $user->ID ); ?>">
           <h5 class="card-title mb-0"><?php echo $user->display_name; ?></h5>

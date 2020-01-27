@@ -34,7 +34,7 @@ wp_register_script( '5','https://unpkg.com/scrollreveal@4.0.0-beta.6?ver=5.3.2')
 wp_register_script( '6','https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js');
 wp_register_script( '7','https://cdnjs.cloudflare.com/ajax/libs/filterizr/1.3.4/jquery.filterizr.min.js');
 wp_register_script( '8','https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js');
-wp_register_script( '9', get_template_directory_uri() . '/js/animated-headline.js' );
+wp_register_script( '9', get_template_directory_uri() . '/js/titulo-animado.js' );
 wp_register_script( '10', get_template_directory_uri() . '/js/unisex.js' );
 
 // Una vez que registramos el script debemos colocarlo en la cola de WordPress (orden)

@@ -1,11 +1,12 @@
 <?php get_header();?>
 <div class="intro-pag text-white h-100 table-cell" style="background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.75), rgba(0, 0, 0, 0.75)), url(https://source.unsplash.com/QckxruozjRg/500x500);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
-  <h1 class="pagina-nombre mb-4 box-headline letters rotate-2">
-      <span class="box-words-wrapper">
-        <b class="is-visible">Error&nbsp;404</b>
-        <b>La&nbsp;Pagina&nbsp;no&nbsp;existe</b>
-      </span>
-    </h1>
+  <div class="title">
+      <h1 class="mb-4 font-italic text-uppercase font-weight-bold title split-character">Error 404</h1>
+  </div>
+  <div class="description">
+      <h6 class="mb-4 font-italic text-uppercase font-weight-bold title split-character">La Pagina no existe</h6>
+  </div>
+
   <p class="migas"><a href="index.html">Inicio</a> / 404</p>
  </div>
  <section id="contacto">

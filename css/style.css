@@ -839,159 +839,72 @@ margin: unset;
 
 /* texto introductorio */
 
-.box-headline {
-    line-height: 1.0;
+.split-character span {
+  display: inline-block;
 }
 
-.box-words-wrapper {
-    display: inline-block;
-    position: relative;
-    text-align: center;
+.title span > span {
+   opacity: 0;
+  animation: flipAnimation 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035) 1 forwards;
 }
 
-.box-words-wrapper b {
-    display: inline-block;
-    position: absolute;
-    white-space: nowrap;
-    left: 0;
-    top: 0;
-}
-
-.box-words-wrapper b.is-visible {
-    position: relative;
-}
-
-.no-js .box-words-wrapper b {
+@keyframes flipAnimation {
+  from {
+    transform: scale(-1, 1);
     opacity: 0;
-}
-
-.no-js .box-words-wrapper b.is-visible {
+  }
+  to {
+    transform: scale(1, 1);
     opacity: 1;
+  }
 }
 
-.box-headline.rotate-2 .box-words-wrapper {
-    -webkit-perspective: 300px;
-    perspective: 300px;
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (max-width: 1024px) {
+ /*  .pagina-nombre {
+    font-size: 2.5em;
+  } */
+  .miga {
+    font-size: 1.5em;
+  }
+
 }
 
-.box-headline.rotate-2 i,
-.box-headline.rotate-2 em {
-    display: inline-block;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (max-width: 800px) {
+ /*  .pagina-nombre {
+    font-size: 1.5em;
+  } */
+  .migas {
+    font-size: 1.0em;
+  }  
+  .navbar
 }
 
-.box-headline.rotate-2 b {
-    opacity: 0;
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+/*   .pagina-nombre {
+    font-size: 0.4em; 
+  } */
+  .migas {
+    font-size: 0.3em;
+  } 
+  .img-bio{
+    display: none;
+   }
 }
 
-.box-headline.rotate-2 i {
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform: translateZ(-20px) rotateX(90deg);
-    transform: translateZ(-20px) rotateX(90deg);
-    opacity: 0;
+@media only screen and (max-width: 320px) {
+
+/* .pagina-nombre { 
+      font-size: 0.3em;  
+   } */
+  .migas {
+    font-size: 0.2em;
+  } 
 }
 
-.is-visible .box-headline.rotate-2 i {
-    opacity: 1;
-}
-
-.box-headline.rotate-2 i.in {
-    -webkit-animation: box-rotate-2-in 0.4s forwards;
-    animation: box-rotate-2-in 0.4s forwards;
-}
-
-.box-headline.rotate-2 i.out {
-    -webkit-animation: box-rotate-2-out 0.4s forwards;
-    animation: box-rotate-2-out 0.4s forwards;
-}
-
-.box-headline.rotate-2 em {
-    -webkit-transform: translateZ(20px);
-    transform: translateZ(20px);
-}
-
-.no-csstransitions .box-headline.rotate-2 i {
-    -webkit-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-    opacity: 0;
-}
-
-.no-csstransitions .box-headline.rotate-2 i em {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-.no-csstransitions .box-headline.rotate-2 .is-visible i {
-    opacity: 1;
-}
-
-@-webkit-keyframes box-rotate-2-in {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateZ(-20px) rotateX(90deg);
-    }
-    60% {
-        opacity: 1;
-        -webkit-transform: translateZ(-20px) rotateX(-10deg);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateZ(-20px) rotateX(0deg);
-    }
-}
-
-@keyframes box-rotate-2-in {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateZ(-20px) rotateX(90deg);
-        transform: translateZ(-20px) rotateX(90deg);
-    }
-    60% {
-        opacity: 1;
-        -webkit-transform: translateZ(-20px) rotateX(-10deg);
-        transform: translateZ(-20px) rotateX(-10deg);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateZ(-20px) rotateX(0deg);
-        transform: translateZ(-20px) rotateX(0deg);
-    }
-}
-
-@-webkit-keyframes box-rotate-2-out {
-    0% {
-        opacity: 1;
-        -webkit-transform: translateZ(-20px) rotateX(0);
-    }
-    60% {
-        opacity: 0;
-        -webkit-transform: translateZ(-20px) rotateX(-100deg);
-    }
-    100% {
-        opacity: 0;
-        -webkit-transform: translateZ(-20px) rotateX(-90deg);
-    }
-}
-
-@keyframes box-rotate-2-out {
-    0% {
-        opacity: 1;
-        -webkit-transform: translateZ(-20px) rotateX(0);
-        transform: translateZ(-20px) rotateX(0);
-    }
-    60% {
-        opacity: 0;
-        -webkit-transform: translateZ(-20px) rotateX(-100deg);
-        transform: translateZ(-20px) rotateX(-100deg);
-    }
-    100% {
-        opacity: 0;
-        -webkit-transform: translateZ(-20px) rotateX(-90deg);
-        transform: translateZ(-20px) rotateX(-90deg);
-    }
-}
 #primary-sidebar ul{
   list-style: none;
   margin-top: 5px;
@@ -1083,6 +996,9 @@ color: rgb(255, 255, 255);
     width: 100%;
   }
 }
+
+
+
 #contenido-blog a{
    color: #833ab4;
 }
@@ -1160,50 +1076,6 @@ color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@media screen and (max-width: 1024px) {
-  .pagina-nombre {
-    font-size: 2.5em;
-  }
-  .miga {
-    font-size: 1.5em;
-  }
-
-}
-
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@media screen and (max-width: 800px) {
-  .pagina-nombre {
-    font-size: 1.5em;
-  }
-  .migas {
-    font-size: 1.0em;
-  }  
-  .navbar
-}
-
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
-  .pagina-nombre {
-    font-size: 0.4em; 
-  }
-  .migas {
-    font-size: 0.3em;
-  } 
-  .img-bio{
-    display: none;
-   }
-}
-
-@media only screen and (max-width: 320px) {
-
-.pagina-nombre { 
-      font-size: 0.3em;  
-   }
-  .migas {
-    font-size: 0.2em;
-  } 
-}
 
 /* :Pies
 ================================================== */
