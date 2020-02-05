@@ -1,5 +1,13 @@
 <?php get_header();?>
+<<<<<<< Updated upstream
   <div class="intro-pag text-white h-100 table-cell" style="background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.75), rgba(0, 0, 0, 0.75)), url(https://source.unsplash.com/QckxruozjRg/500x500); background-position: center bottom, center bottom;  background-size: cover, cover;  background-repeat: repeat, repeat;">
+=======
+<<<<<<< HEAD
+  <div class="intro-pag text-white h-100 table-cell" style="background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.75), rgba(0, 0, 0, 0.75)), url(<?php if (has_post_thumbnail($page_id)){ echo get_the_post_thumbnail_url( $page_id, ('full') ); }  ?>); background-position: center bottom, center bottom;  background-size: cover, cover;  background-repeat: repeat, repeat;">
+=======
+  <div class="intro-pag text-white h-100 table-cell" style="background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.75), rgba(0, 0, 0, 0.75)), url(https://source.unsplash.com/QckxruozjRg/500x500); background-position: center bottom, center bottom;  background-size: cover, cover;  background-repeat: repeat, repeat;">
+>>>>>>> master
+>>>>>>> Stashed changes
   <div class="title">
       <h1 class="mb-4 font-italic text-uppercase font-weight-bold title split-character"><?php wp_title('', true,''); ?></h1>
   </div>

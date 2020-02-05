@@ -847,6 +847,7 @@ margin: unset;
    opacity: 0;
   animation: flipAnimation 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035) 1 forwards;
 }
+<<<<<<< HEAD
 
 @keyframes flipAnimation {
   from {
@@ -859,6 +860,65 @@ margin: unset;
   }
 }
 
+=======
+
+@keyframes flipAnimation {
+  from {
+    transform: scale(-1, 1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (max-width: 1024px) {
+ /*  .pagina-nombre {
+    font-size: 2.5em;
+  } */
+  .miga {
+    font-size: 1.5em;
+  }
+
+}
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (max-width: 800px) {
+ /*  .pagina-nombre {
+    font-size: 1.5em;
+  } */
+  .migas {
+    font-size: 1.0em;
+  }  
+  .navbar
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+/*   .pagina-nombre {
+    font-size: 0.4em; 
+  } */
+  .migas {
+    font-size: 0.3em;
+  } 
+  .img-bio{
+    display: none;
+   }
+}
+
+@media only screen and (max-width: 320px) {
+
+/* .pagina-nombre { 
+      font-size: 0.3em;  
+   } */
+  .migas {
+    font-size: 0.2em;
+  } 
+}
+>>>>>>> master
 
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 @media screen and (max-width: 1024px) {

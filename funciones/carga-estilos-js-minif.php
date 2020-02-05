@@ -35,7 +35,15 @@ wp_register_script( '6','https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescrol
 wp_register_script( '7','https://cdnjs.cloudflare.com/ajax/libs/filterizr/1.3.4/jquery.filterizr.min.js');
 wp_register_script( '8','https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js');
 wp_register_script( '9', get_template_directory_uri() . '/js/titulo-animado.js' );
+<<<<<<< Updated upstream
 wp_register_script( '10', get_template_directory_uri() . '/js/unisex.js' );
+=======
+<<<<<<< HEAD
+wp_register_script( '10', get_template_directory_uri() . '/js/unisex.js', array(), THEME_VERSION, 'all' );
+=======
+wp_register_script( '10', get_template_directory_uri() . '/js/unisex.js' );
+>>>>>>> master
+>>>>>>> Stashed changes
 
 // Una vez que registramos el script debemos colocarlo en la cola de WordPress (orden)
 wp_enqueue_script( '1' );
