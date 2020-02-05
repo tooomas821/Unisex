@@ -1,17 +1,24 @@
-<?php?>
+<?php
+/**
+* El encabezado del tema.
+* Muestra toda la sección <header>
+* @package WordPress
+* @subpackage Unisex
+**/
+?>
 <!DOCTYPE html>
-<html>
+<!--[if IE 7]><html class="ie ie7" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 8]><html class="ie ie8" <?php language_attributes(); ?>><![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Unisex">
-<meta name="author" content="">
-<meta name="keywords" content="html, css, twitter bootstrap, javascript, jquery, responsive">
-<title><?php bloginfo( 'name' ); ?> <?php wp_title('', true,''); ?></title>
+<meta name="author" content="Unisex">
  <?php wp_head(); ?>
 </head>
 
-<body>
+<body class="wp-embed-responsive">
  <header id="masthead" class="site-header">
   <nav id="primary-navigation" class="navbar navbar-expand-md fixed-top" data-0="background:rgba(59,58,54,0); border-bottom-color:rgba(226,226,226,0);" data-500="background:rgba(32,32,32,1); border-bottom-color:rgba(226,226,226,1);">
    <div class="container-fluid">
@@ -44,4 +51,3 @@
   <!-- /.site-navigation -->
  </header>
 <!-- /.navbar --> 
-

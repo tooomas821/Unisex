@@ -1,13 +1,16 @@
 <?php
+// obtiene la versión escrita en el css base del tema
+ $theme = wp_get_theme(); 
+ define('THEME_VERSION', $theme->Version);
 //Función que carga las hojas de estilo del tema
 function estilo_del_sitio() { 
- 
   //Registrando estilos
-  wp_register_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
+  wp_register_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', array(), '4.4.1', 'all' );
   wp_register_style('wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;display=swap');
   wp_register_style('font-awesome', 'https://use.fontawesome.com/releases/v5.0.4/css/all.css');
   wp_register_style('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css'); 
-  wp_register_style('theme-style', get_stylesheet_uri(), '', '1.0', 'all');
+  wp_register_style('woocommerce', get_template_directory_uri() . '/css/woocommerce.css');
+  wp_register_style('theme-style', get_stylesheet_uri(), array(), THEME_VERSION, 'all' );
   //Cargando estilos
     wp_enqueue_style( 'bootstrap' ); 
     wp_enqueue_style( 'wpb-google-fonts' );
@@ -35,15 +38,7 @@ wp_register_script( '6','https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescrol
 wp_register_script( '7','https://cdnjs.cloudflare.com/ajax/libs/filterizr/1.3.4/jquery.filterizr.min.js');
 wp_register_script( '8','https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js');
 wp_register_script( '9', get_template_directory_uri() . '/js/titulo-animado.js' );
-<<<<<<< Updated upstream
-wp_register_script( '10', get_template_directory_uri() . '/js/unisex.js' );
-=======
-<<<<<<< HEAD
 wp_register_script( '10', get_template_directory_uri() . '/js/unisex.js', array(), THEME_VERSION, 'all' );
-=======
-wp_register_script( '10', get_template_directory_uri() . '/js/unisex.js' );
->>>>>>> master
->>>>>>> Stashed changes
 
 // Una vez que registramos el script debemos colocarlo en la cola de WordPress (orden)
 wp_enqueue_script( '1' );
